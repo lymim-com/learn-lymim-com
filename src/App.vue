@@ -6,6 +6,7 @@
         <HomeFilled />
       </el-icon>
     </el-menu-item>
+    <el-menu-item index="/guide">指南</el-menu-item>
   </el-menu>
   <router-view></router-view>
 </template> 

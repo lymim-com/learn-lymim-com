@@ -11,6 +11,7 @@ import Home from './pages/home/Home.vue';
 const routes = [
   { path: '', component: Home },
   { path: '/guide', component: Guide },
+  { path: '/guide/:docName', component: Guide },
 ];
 
 const router = createRouter({
