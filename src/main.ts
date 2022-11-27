@@ -6,12 +6,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css'
 
-import Docs from './pages/docs/Docs.vue';
+import Guide from './pages/guide/Guide.vue';
 import Home from './pages/home/Home.vue';
 
 const routes = [
   { path: '', component: Home },
-  { path: '/docs', component: Docs },
+  { path: '/guide', component: Guide },
 ];
 
 const router = createRouter({
