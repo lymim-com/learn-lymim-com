@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import MdEditor from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
@@ -34,7 +34,10 @@ const docs = ref([
 
 const route = useRoute();
 let docName = route.params.docName;
-doctext.value = docs.value.filter(d => d.title == docName)[0]?.content ?? '';
+onMounted(async () => {
+  let t = await fetch(`/${docName}.md`);
+  doctext.value = await t.text();
+});
 </script>
 
 <style scoped lang="scss">
