@@ -130,3 +130,43 @@ Class01 : int chimp
 Class01 : int gorilla
 Class08 <--> C2: Cool label
 ```
+
+## Git graph -: experimental
+
+```
+gitGraph:
+options
+{
+    "nodeSpacing": 100,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
+
+```mermaid
+gitGraph:
+options
+{
+    "nodeSpacing": 100,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout main
+commit
+commit
+merge newbranch
+```

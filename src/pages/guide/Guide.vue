@@ -19,6 +19,15 @@ import { useRoute } from 'vue-router';
 import MdEditor from 'md-editor-v3';
 import 'md-editor-v3/lib/style.css';
 
+// 由于 MdEditor 依赖的 mermaid 版本存在问题，暂时手动设置版本
+MdEditor.config({
+  editorExtensions: {
+    mermaid: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.2.2/mermaid.min.js',
+    }
+  }
+})
+
 const doctext = ref('');
 
 const docs = ref([
