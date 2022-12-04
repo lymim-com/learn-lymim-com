@@ -21,12 +21,18 @@ const route = useRoute();
 const activeIndex = ref<string | null>(null);
 
 onMounted(() => {
-  // 刷新时，route.path 的默认值是 '/'，然后变成刷新前的地址，这将导致刷新时抖动；
-  // 因此在 100ms 后检查路径情况，如果仍为未设置状态，则设置为 '/'
-  setTimeout(() => activeIndex.value = activeIndex.value ?? '/', 50);
+  console.log(route.path);
+  // 因为未知原因，刷新页面或导航时，此处直接读取 route.path 的结果总是 '/'，
+  // 在 setTimeout 中则可以读取到正确地址，即使设置的延时是 0
+  setTimeout(() => {
+    // 此处提取路径 /lv1path/lv2path 中的 lv1path 部分
+    var lv1Path = route.path.split('/')[1];
+    // 当路径有效而选中菜单无效时，应用路径中的选中项
+    if (lv1Path && !activeIndex.value) {
+      activeIndex.value = `/${lv1Path}`;
+    }
+  }, 0);
 })
-
-watch(() => route.path, () => activeIndex.value = route.path);
 </script>
 
 <style scoped>
