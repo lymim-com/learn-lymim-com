@@ -1,5 +1,5 @@
 FROM node:18-alpine
-RUN npm install --only=development
+RUN npm install --production
 RUN npm run build
 
 FROM nginx:alpine
