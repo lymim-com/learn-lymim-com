@@ -1,5 +1,7 @@
 FROM node:18-alpine
-RUN npm install --production
+WORKDIR /usr/app
+COPY ./ /usr/app
+RUN npm install
 RUN npm run build
 
 FROM nginx:alpine
