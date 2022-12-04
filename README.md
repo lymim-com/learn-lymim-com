@@ -6,6 +6,30 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
+## GitHub
+
+- 由于 GitHub 连接困难，可以尝试设置代理
+  ```
+  > git config http.proxy "localhost:10809"
+  ```
+  - 此设置仅影响当前仓库，配置保存在 .git/config 文件中
+    ```diff
+      ...
+      [branch "master"]
+        remote = origin
+        merge = refs/heads/master
+    + [http]
+    +   proxy = localhost:10809
+    ```
+  - 如果要进行全局设置，可以加 `--global`
+    ```
+    > git config --global http.proxy "localhost:10809"
+    ```
+  - 如果要取消设置，可以执行
+    ```
+    > git config --unset http.proxy
+    ```
+
 ## Type Support For `.vue` Imports in TS
 
 Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
