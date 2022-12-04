@@ -3,6 +3,7 @@ WORKDIR /usr/app
 COPY ./ /usr/app
 RUN npm install
 RUN npm run build
+COPY . .
 
 FROM nginx:alpine
 COPY dist/ /usr/share/nginx/html/
