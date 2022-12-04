@@ -2,8 +2,8 @@
   <div class="common-layout">
     <el-container>
       <el-aside width="200px">
-        <li v-for="doc of docs">
-          <a :href="`/guide/${doc.title}`">{{ doc.title }}</a>
+        <li v-for="docname of docs">
+          <a :href="`/guide/${docname}`">{{ docname }}</a>
         </li>
       </el-aside>
       <el-main width="200px">
@@ -22,14 +22,9 @@ import 'md-editor-v3/lib/style.css';
 const doctext = ref('');
 
 const docs = ref([
-  {
-    title: 'markdown',
-    content: '# title\n - ul1\n - ul2',
-  },
-  {
-    title: 'mermaid',
-    content: '```mermaid\ngraph TD;\n    A-->B;\n    A-->C;\n    B & C -->D;\n```',
-  }
+  'README',
+  'markdown',
+  'mermaid',
 ])
 
 const route = useRoute();
@@ -45,7 +40,7 @@ onMounted(async () => {
 </style>
 
 <style lang="scss">
-h1{
+h1 {
   font-size: 1.8em;
 }
 </style>

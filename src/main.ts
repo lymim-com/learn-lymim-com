@@ -11,7 +11,7 @@ import Practice from './pages/practice/Practice.vue';
 
 const routes = [
   { path: '', component: Home },
-  { path: '/guide', component: Guide },
+  { path: '/guide', redirect: '/guide/README' },
   { path: '/guide/:docName', component: Guide },
   { path: '/practice', component: Practice },
 ];
