@@ -7,7 +7,7 @@ import 'element-plus/dist/index.css'
 
 import Guide from './pages/guide/Guide.vue';
 import Home from './pages/home/Home.vue';
-import Practice from './pages/practice/practice.vue';
+import Practice from './pages/practice/Practice.vue';
 
 const routes = [
   { path: '', component: Home },
