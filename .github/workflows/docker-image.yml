@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - uses: actions/checkout@v3
-    # - name: Build app
-    #   run: |
-    #     npm install
-    #     npm run build
-
     - uses: actions/checkout@v3
+    - name: Build app
+      run: |
+        npm install
+        npm run build
+        echo $(ls -1 .)
     - name: Build the Docker image
       run: |
         docker build -t lymims/learn-lymim-com .
+        echo $(ls -1 .)
     - name: Login to Registry
       run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
     - name: Push Image
