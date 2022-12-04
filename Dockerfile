@@ -7,6 +7,7 @@ COPY . .
 RUN echo $(ls -1 .)
 
 FROM nginx:alpine
+WORKDIR /usr/app
 RUN echo $(ls -1 .)
 COPY dist/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
