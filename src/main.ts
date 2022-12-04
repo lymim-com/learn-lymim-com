@@ -7,11 +7,13 @@ import 'element-plus/dist/index.css'
 
 import Guide from './pages/guide/Guide.vue';
 import Home from './pages/home/Home.vue';
+import Practice from './pages/practice/practice.vue';
 
 const routes = [
   { path: '', component: Home },
   { path: '/guide', component: Guide },
   { path: '/guide/:docName', component: Guide },
+  { path: '/practice', component: Practice },
 ];
 
 const router = createRouter({
