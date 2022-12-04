@@ -35,7 +35,7 @@ const docs = ref([
 const route = useRoute();
 let docName = route.params.docName;
 onMounted(async () => {
-  let t = await fetch(`/${docName}.md`);
+  let t = await fetch(`/guide/${docName}.md`);
   doctext.value = await t.text();
 });
 </script>
