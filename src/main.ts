@@ -13,7 +13,8 @@ const routes = [
   { path: '', component: Home },
   { path: '/guide', redirect: '/guide/README' },
   { path: '/guide/:docName', component: Guide },
-  { path: '/practice', component: Practice },
+  { path: '/practice', redirect: '/practice/README' },
+  { path: '/practice/:docName', component: Practice },
 ];
 
 const router = createRouter({
