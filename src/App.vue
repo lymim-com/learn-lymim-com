@@ -1,15 +1,17 @@
 <template>
-  <el-menu router :default-active="activeIndex" mode="horizontal" background-color="#545c64" text-color="#fff"
-    active-text-color="#ffd04b">
-    <el-menu-item style="display:inline" index="/">
-      <el-icon :size="30" color="white">
-        <HomeFilled />
-      </el-icon>
-    </el-menu-item>
-    <el-menu-item index="/guide">指南</el-menu-item>
-    <el-menu-item index="/practice">实践</el-menu-item>
-  </el-menu>
-  <router-view></router-view>
+  <header class="navbar">
+    <el-menu router :default-active="activeIndex" mode="horizontal" background-color="#545c64" text-color="#fff"
+      active-text-color="#ffd04b">
+      <el-menu-item style="display:inline" index="/">
+        <el-icon :size="30" color="white">
+          <HomeFilled />
+        </el-icon>
+      </el-menu-item>
+      <el-menu-item index="/guide">指南</el-menu-item>
+      <el-menu-item index="/practice">实践</el-menu-item>
+    </el-menu>
+  </header>
+  <router-view class="page-content"></router-view>
 </template> 
 
 <script setup lang="ts">
@@ -47,4 +49,15 @@ onMounted(() => {
   text-align: center;
   color: #2c3e50;
 }
+
+.navbar {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 59px;
+  z-index: 11;
+}
+
+.page-content {}
 </style>
