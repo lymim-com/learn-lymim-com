@@ -1,16 +1,12 @@
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-aside width="200px">
-        <li v-for="docname of docs">
-          <a :href="`/guide/${docname}`">{{ docname }}</a>
-        </li>
-      </el-aside>
-      <el-main width="200px">
-        <md-editor v-model="doctext" previewOnly />
-      </el-main>
-    </el-container>
+  <div class="sidebar">
+    <li v-for="docname of docs">
+      <a :href="`/guide/${docname}`">{{ docname }}</a>
+    </li>
   </div>
+  <main class="page-content">
+    <md-editor v-model="doctext" previewOnly />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -39,8 +35,18 @@ onMounted(async () => {
 
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
   font-size: 1.8em;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 200px;
+}
+
+.page-content {
+  margin-left: 200px;
 }
 </style>
