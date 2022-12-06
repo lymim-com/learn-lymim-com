@@ -1,6 +1,10 @@
 <template>
   <div class="root">
-    <h1>Learn</h1>
+  <br>
+    <br>
+    <img src="../assets/logo.png" alt="lil's" style="width: 6rem" class="w-24">
+    <br>
+    <H1 class="text-3xl font-sans">Learn</H1>
   </div>
 </template>
 
