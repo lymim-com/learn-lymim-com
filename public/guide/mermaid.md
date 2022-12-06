@@ -17,6 +17,8 @@ https://mermaid-js.github.io/mermaid/#/
 
 ## Flowchart
 
+> https://mermaid-js.github.io/mermaid/#/flowchart
+
 ```
 graph TD;
     A-->B;
@@ -31,11 +33,31 @@ graph TD;
     B & C -->D;
 ```
 
-* `TD` 表示 `Top` -> `Down`
-* 类似的还有 `DT` `LR` `RL`
-* `D` 亦可替换为 `B`，如 `TB` `BT`
-
-关于更多形状，参考：https://mermaid-js.github.io/mermaid/#/flowchart
+- `TD` 表示 `Top` -> `Down`
+- 类似的还有 `DT` `LR` `RL`
+- `D` 亦可替换为 `B`，如 `TB` `BT`
+- 形状
+  ```mermaid
+  graph
+    n[node]
+    rn([round-node])
+    srn[[subroutine-node]]
+    csn[(cylindrical-node)]
+  ```
+  ```mermaid
+  graph
+    cn((cricle-node))
+    asn>asymmetric-shape-node]
+    rbn{rhombus-node}
+    hn{{hexagon-node}}
+  ```
+  ```mermaid
+  graph
+    pn[/parallelogram-node/]
+    pna[\parallelogram-alt-node\]
+    tn[/trapezoid\]
+    tna[\trapezoid/]
+  ```
 
 ## Sequence diagram
 
