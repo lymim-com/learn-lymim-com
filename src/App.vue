@@ -9,9 +9,10 @@
       </el-menu-item>
       <el-menu-item index="/guide">指南</el-menu-item>
       <el-menu-item index="/practice">实践</el-menu-item>
+      <el-menu-item index="/snippet">片段</el-menu-item>
     </el-menu>
   </header>
-  <router-view class="page-content"></router-view>
+  <router-view></router-view>
 </template> 
 
 <script setup lang="ts">
@@ -58,6 +59,4 @@ onMounted(() => {
   height: 59px;
   z-index: 11;
 }
-
-.page-content {}
 </style>

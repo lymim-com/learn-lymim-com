@@ -8,6 +8,7 @@ import 'element-plus/dist/index.css'
 import Guide from './pages/guide/Guide.vue';
 import Home from './pages/home/Home.vue';
 import Practice from './pages/practice/Practice.vue';
+import Snippet from './pages/snippet/Snippet.vue';
 
 const routes = [
   { path: '', component: Home },
@@ -15,6 +16,8 @@ const routes = [
   { path: '/guide/:docName', component: Guide },
   { path: '/practice', redirect: '/practice/README' },
   { path: '/practice/:docName', component: Practice },
+  { path: '/snippet', redirect: '/snippet/README' },
+  { path: '/snippet/:docName', component: Snippet },
 ];
 
 const router = createRouter({
