@@ -22,7 +22,20 @@ const docs = ref([
   'README',
 ]);
 
-const allDocs = {
+/**
+ * 此处指定了 allDocs 的类型是
+ *  {
+ *    string: string[]
+ *  }
+ * 如果不指定类型，它的默认类型将是:
+ *  {
+ *    guide: string[];
+ *    practice: string[];
+ *    snippet: string[];
+ *  }
+ * 这将会对字典查询造成困扰
+ */
+const allDocs: { [group: string]: string[] } = {
   'guide': [
     'README',
     'markdown',
@@ -47,20 +60,23 @@ const route = useRoute();
 
 // 初始化时加载文档
 onMounted(async () => {
-  group.value = route.params.group;
-  docs.value = allDocs[route.params.group];
-  docName.value = route.params.docName;
+  // 从业务分析可以确认此处 route.params.group 的类型是 string，
+  // 此时即使添加类型检查，也没有处理类型异常的合适方式和必要性，
+  // 因此直接转类型而不做额外的判断，其他设计到 route.params 的情况类似
+  group.value = route.params.group as string;
+  docs.value = allDocs[route.params.group as string];
+  docName.value = route.params.docName as string;
   await updateDoc();
 });
 
 // 路由时加载文档
 watch(() => route.params.group, g => {
-  group.value = g;
-  docs.value = allDocs[g];
+  group.value = g as string;
+  docs.value = allDocs[g as string];
   updateDoc();
 });
 watch(() => route.params.docName, doc => {
-  docName.value = doc;
+  docName.value = doc as string;
   updateDoc();
 });
 
