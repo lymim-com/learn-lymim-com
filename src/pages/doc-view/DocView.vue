@@ -1,9 +1,7 @@
 <template>
   <div class="sidebar">
-    <li v-for="docname of docs">
-      <!-- 使用 router-link 可以在不重新加载页面的情况下更改 URL -->
-      <router-link :to="`/${group}/${docname}`">{{ docname }}</router-link>
-    </li>
+    <!-- 使用 router-link 可以在不重新加载页面的情况下更改 URL -->
+    <router-link :to="`/${group}/${docname}`" class="link" v-for="docname of docs">{{ docname }}</router-link>
   </div>
   <main class="page-content">
     <md-editor v-model="doctext" previewOnly />
@@ -72,22 +70,49 @@ async function updateDoc() {
 }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+h1 {
+  font-size: 2.2em;
+}
 </style>
 
 <style lang="scss" scoped>
-h1 {
-  font-size: 1.8em;
-}
-
 .sidebar {
   position: fixed;
   left: 0;
-  width: 200px;
+  width: 202px;
+  display: block;
+  padding: 48px 32px 0;
+
+  .link {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    padding: 10px 16px;
+    line-height: 1.5;
+    font-size: .9rem;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+    color: #606266;
+
+    &:active {
+      color: #409eff;
+    }
+
+    &:hover {
+      color: #409eff;
+    }
+  }
+
+  .router-link-active {
+    background-color: #409eff1a;
+    font-weight: 600;
+    color: #409eff;
+    transition: color .25s;
+  }
 }
 
 .page-content {
-  margin-left: 200px;
+  margin-left: 266px;
+  padding: 30px;
 }
 </style>
