@@ -50,6 +50,7 @@ const route = useRoute();
 // 初始化时加载文档
 onMounted(async () => {
   group.value = route.params.group;
+  docs.value = allDocs[route.params.group];
   docName.value = route.params.docName;
   await updateDoc();
 });

@@ -5,7 +5,7 @@ import { createRouter, createWebHistory, RouteLocation } from 'vue-router';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css'
 
-import Guide from './pages/guide/Guide.vue';
+import DocView from './pages/doc-view/DocView.vue';
 import Home from './pages/Home.vue';
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     path: '/:group(guide|practice|snippet)',
     redirect: (to: RouteLocation) => ({ path: `/${to.params.group}/README` })
   },
-  { path: '/:group(guide|practice|snippet)/:docName', component: Guide },
+  { path: '/:group(guide|practice|snippet)/:docName', component: DocView },
 ];
 
 const router = createRouter({
