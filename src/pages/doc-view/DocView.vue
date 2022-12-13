@@ -129,7 +129,7 @@ h1 {
 
 .page-content {
   margin-left: 266px;
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 
 @media (max-width: 800px) {
