@@ -94,6 +94,14 @@ async function updateDoc() {
 h1 {
   font-size: 2.2em;
 }
+
+.md-editor-preview {
+  p {
+    word-break: break-word;
+    text-align: justify;
+    text-indent: 1.5rem;
+  }
+}
 </style>
 
 <style lang="scss" scoped>
