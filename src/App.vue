@@ -10,6 +10,7 @@
       <el-menu-item index="/guide">指南</el-menu-item>
       <el-menu-item index="/practice">实践</el-menu-item>
       <el-menu-item index="/snippet">片段</el-menu-item>
+      <el-menu-item index="/nce">NCE</el-menu-item>
     </el-menu>
   </header>
   <router-view></router-view>

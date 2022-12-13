@@ -53,6 +53,10 @@ const allDocs: { [group: string]: string[] } = {
     'WPF-TreeView',
     'WPF-UserControl',
     'CSharp-ReadCSV',
+  ],
+  'nce': [
+    'README',
+    '3-6-Smash-and-grab',
   ]
 };
 

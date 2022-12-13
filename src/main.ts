@@ -11,10 +11,10 @@ import Home from './pages/Home.vue';
 const routes = [
   { path: '', component: Home },
   {
-    path: '/:group(guide|practice|snippet)',
+    path: '/:group(guide|practice|snippet|nce)',
     redirect: (to: RouteLocation) => ({ path: `/${to.params.group}/README` })
   },
-  { path: '/:group(guide|practice|snippet)/:docName', component: DocView },
+  { path: '/:group(guide|practice|snippet|nce)/:docName', component: DocView },
 ];
 
 const router = createRouter({
