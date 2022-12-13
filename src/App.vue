@@ -59,5 +59,6 @@ onMounted(() => {
   left: 0;
   height: 59px;
   z-index: 11;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 }
 </style>
