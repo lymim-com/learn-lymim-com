@@ -131,4 +131,15 @@ h1 {
   margin-left: 266px;
   padding: 30px;
 }
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 162px;
+    padding: 48px 12px 0;
+  }
+
+  .page-content {
+    margin-left: 176px;
+  }
+}
 </style>
