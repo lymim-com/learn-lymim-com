@@ -57,6 +57,7 @@ const allDocs: { [group: string]: string[] } = {
   'industry': [
     'README',
     'ASAM-AE-MCD1-CCP-BS-V2.1.0',
+    'ccp_v2_6.aml'
   ],
   'nce': [
     'README',
