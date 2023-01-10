@@ -54,6 +54,10 @@ const allDocs: { [group: string]: string[] } = {
     'WPF-UserControl',
     'CSharp-ReadCSV',
   ],
+  'industry': [
+    'README',
+    'ASAM-AE-MCD1-CCP-BS-V2.1.0',
+  ],
   'nce': [
     'README',
     '3-6-Smash-and-grab',
