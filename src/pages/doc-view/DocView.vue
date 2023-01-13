@@ -104,7 +104,6 @@ h1 {
   p {
     word-break: break-word;
     text-align: justify;
-    text-indent: 1.5rem;
   }
 }
 </style>
