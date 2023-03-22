@@ -56,7 +56,7 @@
 </CodeSnippets>
 ```
 
-## propinref.snippet
+## propnoc.snippet
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
