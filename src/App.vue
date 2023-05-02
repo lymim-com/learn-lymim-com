@@ -14,7 +14,9 @@
       <el-menu-item index="/nce">NCE</el-menu-item>
     </el-menu>
   </header>
-  <router-view></router-view>
+  <div class="content">
+    <router-view></router-view>
+  </div>
 </template> 
 
 <script setup lang="ts">
@@ -54,12 +56,18 @@ onMounted(() => {
 }
 
 .navbar {
-  position: sticky;
+  /* 如果使用 sticky，在 iPad 下下拉回弹效果会带动标题一起移动 */
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   height: 59px;
   z-index: 11;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.content {
+  display: block;
+  padding-top: 59px;
 }
 </style>
