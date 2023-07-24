@@ -11,7 +11,7 @@
       <el-menu-item index="/practice">实践</el-menu-item>
       <el-menu-item index="/snippet">片段</el-menu-item>
       <el-menu-item index="/industry">行业</el-menu-item>
-      <el-menu-item index="/nce">NCE</el-menu-item>
+      <!-- <el-menu-item index="/nce">NCE</el-menu-item> -->
     </el-menu>
   </header>
   <div class="content">
